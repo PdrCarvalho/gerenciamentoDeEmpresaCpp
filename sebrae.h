@@ -6,9 +6,13 @@ class Sebrae {
     map<string,Empresa> empresas;
     public:
     void adicionarEmpresa ();
-    void menu();
     int checkEmpresa(string cnpj);
     void showEmpresas();
+    void Menu();
+    void showOption();
+    void adicionarFuncionario();
+    void mostrarFuncionario();
+    void aumento();
 
 };
 
