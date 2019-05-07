@@ -75,10 +75,24 @@ float Empresa::quantPorEmpresa()
 }
 
 std::ostream &operator<<(std::ostream &o, Empresa t)
-{
+{   
     for (std::map<string, Funcionario>::iterator it = t.func.begin(); it != t.func.end(); ++it)
-    {
-        o << it->first << " " << it->second.getNome() << " " << it->second.getSalario() << '\n';
+    {  
+        
+        o << it->first << " " << it->second.getNome() << " " <<(int)it->second.getSalario() <<'\n';
     }
     return o;
+}
+void Empresa::mostrarPorData(int dias){
+    time_t tempoatual;
+    time(&tempoatual);
+    double segundos;
+    for (std::map<string, Funcionario>::iterator it = func.begin(); it != func.end(); ++it)
+    {   
+        segundos = difftime(tempoatual,it->second.getDataAdmissao())/86400;
+        if (segundos <= dias){
+            cout<<it->second.getNome()<<" "<<it->second.getCPF()<<endl;
+        }
+
+    }
 }

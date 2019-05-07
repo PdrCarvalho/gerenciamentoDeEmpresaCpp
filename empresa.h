@@ -26,5 +26,6 @@ class Empresa {
 	void aumento(int valor);
 	static float quantPorEmpresa();
 	friend std::ostream& operator<< (std::ostream &o, Empresa  t);
+	void mostrarPorData(int dias);
 };
 #endif

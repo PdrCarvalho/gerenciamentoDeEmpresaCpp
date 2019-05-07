@@ -13,6 +13,8 @@ class Sebrae {
     void adicionarFuncionario();
     void mostrarFuncionario();
     void aumento();
+    struct tm ajusteData();
+    void mostrarProData();
 
 };
 
